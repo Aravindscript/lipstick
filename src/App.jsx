@@ -122,7 +122,10 @@ import l6 from "./assets/l66.png";
         <main>
           <section className="hero" id="home">
             <video className="hero-video" autoPlay muted loop playsInline>
-              <source src="/videos/hero.mp4" type="video/mp4" />
+              <source
+  src={`${import.meta.env.BASE_URL}videos/hero.mp4`}
+  type="video/mp4"
+/>
             </video>
             <div className="hero-overlay" />
   
@@ -498,7 +501,10 @@ import l6 from "./assets/l66.png";
             onEnded={() => setPhase("main")}
             onError={() => setPhase("main")}
           >
-            <source src="/videos/intro.mp4" type="video/mp4" />
+           <source
+  src={`${import.meta.env.BASE_URL}videos/intro.mp4`}
+  type="video/mp4"
+/>
           </video>
           <div className="velvera-intro-shade" />
           <div className="velvera-intro-copy">
