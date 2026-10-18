@@ -10,6 +10,7 @@
   
   import Lipstick from "./Lipstick.jsx";
   import "./style.css";
+  import AtelierExperience from "./AtelierExperience";
  import l1 from "./assets/l11.png";
 import l2 from "./assets/l22.png";
 import l3 from "./assets/l33.png";
@@ -171,8 +172,17 @@ import l6 from "./assets/l66.png";
             </div>
           </section>
   
-          {/* 76 FRAME SCROLL ANIMATION */}
-          <Lipstick />
+         {/* EXISTING FRAME-BY-FRAME ANIMATION */}
+<Lipstick />
+
+{/* NEW PREMIUM SVG EXPERIENCE */}
+<AtelierExperience />
+
+{/* EXISTING LIPSTICK COLLECTION */}
+<section className="collection section-pad" id="collection">
+
+</section>
+          
   
           {/* COLLECTION */}
           
@@ -385,23 +395,108 @@ import l6 from "./assets/l66.png";
           </section>
         </main>
   
-        <footer className="footer">
-          <div>
-            <a className="logo" href="#home">VELVÉRA<span>®</span></a>
-            <p>Color, captured. Beauty, remembered.</p>
-          </div>
-  
-          <div className="footer-links">
-            <a href="#about">Our philosophy</a>
-            <a href="#collection">Collection</a>
-            <a href="#booking">Book a session</a>
-          </div>
-  
-          <div className="footer-right">
-            <span>CRAFTED FOR YOUR MOMENT</span>
-            <span>© 2026 VELVÉRA BEAUTY</span>
-          </div>
-        </footer>
+      
+{/* PREMIUM LUXURY FOOTER */}
+<footer className="footer footer-premium">
+  <div className="footer-newsletter">
+    <div>
+      <span className="footer-eyebrow">THE VELVÉRA LETTER</span>
+      <h2>A little beauty.<br /><em>A lasting impression.</em></h2>
+      <p>
+        Discover signature shades, atelier stories and
+        considered beauty rituals, delivered occasionally.
+      </p>
+    </div>
+
+    <form
+      className="footer-newsletter-form"
+      onSubmit={(event) => {
+        event.preventDefault();
+        alert("Thank you for your interest in VELVÉRA.");
+      }}
+    >
+      <label htmlFor="footer-email">YOUR EMAIL ADDRESS</label>
+      <div className="footer-email-row">
+        <input
+          id="footer-email"
+          type="email"
+          placeholder="you@example.com"
+          required
+        />
+        <button type="submit" aria-label="Subscribe">
+          <ArrowUpRight size={20} />
+        </button>
+      </div>
+      <small>Beauty notes, thoughtfully shared.</small>
+    </form>
+  </div>
+
+  <div className="footer-main">
+    <div className="footer-brand-column">
+      <a className="logo footer-logo" href="#home">
+        VELVÉRA<span>®</span>
+      </a>
+      <p>
+        Color, captured.<br />
+        Beauty, remembered.
+      </p>
+      <span className="footer-brand-note">
+        THE ART OF A PERSONAL SIGNATURE
+      </span>
+    </div>
+
+    <div className="footer-column">
+      <h3>EXPLORE</h3>
+      <a href="#about">Our Philosophy</a>
+      <a href="#story">Our Story</a>
+      <a href="#collection">Signature Collection</a>
+      <a href="#atelier">The Atelier</a>
+      <a href="#booking">Private Consultation</a>
+    </div>
+
+    <div className="footer-column">
+      <h3>THE EXPERIENCE</h3>
+      <a href="#atelier-making">The Art of Color</a>
+      <a href="#atelier-shades">Discover Your Shade</a>
+      <a href="#booking">Book an Appointment</a>
+      <a href="#collection">Explore All Shades</a>
+    </div>
+
+    <div className="footer-column">
+      <h3>CLIENT CARE</h3>
+      <a href="mailto:hello@velvera.example">Contact Us</a>
+      <a href="#booking">Appointment Enquiries</a>
+      <a href="#collection">Product Information</a>
+      <a href="#home">Privacy & Policies</a>
+    </div>
+
+    <div className="footer-column footer-social">
+      <h3>FOLLOW OUR WORLD</h3>
+      <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+        Instagram <ArrowUpRight size={14} />
+      </a>
+      <a href="https://www.pinterest.com/" target="_blank" rel="noreferrer">
+        Pinterest <ArrowUpRight size={14} />
+      </a>
+      <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
+        YouTube <ArrowUpRight size={14} />
+      </a>
+    </div>
+  </div>
+
+  <div className="footer-manifesto">
+    <span>NOT MADE TO FOLLOW.</span>
+    <span className="footer-watermark">V</span>
+    <span>MADE TO LEAVE A TRACE.</span>
+  </div>
+
+  <div className="footer-bottom">
+    <span>© 2026 VELVÉRA BEAUTY HOUSE</span>
+    <a href="#home">BACK TO TOP ↑</a>
+    <span>CRAFTED WITH INTENTION</span>
+  </div>
+</footer>
+
   
         <div className={toast ? "toast toast-show" : "toast"} role="status">
           {toast}
